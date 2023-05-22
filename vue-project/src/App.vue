@@ -1,7 +1,22 @@
-<script setup>
+<script >
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import PortfolioItem from './components/PortfolioItem.vue'
+import worksData from './assets/works.json'
+
+export default {
+  data() {
+    return {
+      works: worksData,
+    };
+  },
+  components: {
+    PortfolioItem,
+  },
+};
+
+
+
 </script>
 
 <template>
@@ -13,22 +28,32 @@ import PortfolioItem from './components/PortfolioItem.vue'
   </header>
 
   <main>
-<div class="row">
-  <div class="col">
-    <PortfolioItem 
-      title="ciao mondo"
-      abstract="Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore."
-      imageUrl="/images/pere.jpg"
-       />
-  </div>
-  <div class="col">
-    <PortfolioItem 
-      title="Ola"
-      abstract="Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore. magna aliqua."
-      imageUrl="https://source.unsplash.com/random/?green" />
-  </div>
-</div>
+    <div class="row">
+      <div class="col">
+        <PortfolioItem 
+          title="ciao mondo"
+          abstract="Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore."
+          imageUrl="/images/pere.jpg"
+          />
+      </div>
+      <div class="col">
+        <PortfolioItem 
+          title="Ola"
+          abstract="Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore. magna aliqua."
+          imageUrl="https://source.unsplash.com/random/?green" />
+      </div>
+    </div>
   </main>
+
+  <div id="works">
+    <p v-for="work in works" :key="work.id">
+      <h1>{{ work.title }}</h1>
+      <p class="description">
+        {{ work.description }}
+      </p>
+      <img  :src="work.image_detail" width="125" height="125" />
+    </p>
+  </div>
 </template>
 
 <style scoped>
