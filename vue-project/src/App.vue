@@ -29,31 +29,31 @@ export default {
 
   <main>
     <div class="row">
-      <div class="col">
+      <div class="col" v-for="work in works" :key="work.id">
         <PortfolioItem 
-          title="ciao mondo"
-          abstract="Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore."
-          imageUrl="/images/pere.jpg"
+          :title="work.title"
+          :abstract="work.description"
+          :imageUrl="work.image_thumbnail"
           />
       </div>
-      <div class="col">
+        <!-- <div class="col">
         <PortfolioItem 
           title="Ola"
           abstract="Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore. magna aliqua."
           imageUrl="https://source.unsplash.com/random/?green" />
-      </div>
+        </div>-->
     </div>
   </main>
 
-  <div id="works">
-    <p v-for="work in works" :key="work.id">
-      <h1>{{ work.title }}</h1>
-      <p class="description">
+   <!-- <div id="works">
+       <p v-for="work in works" :key="work.id">
+        <h1>{{ work.title }}</h1>
+       <p class="description">
         {{ work.description }}
-      </p>
-      <img  :src="work.image_detail" width="125" height="125" />
-    </p>
-  </div>
+       </p>
+       <img  :src="work.image_detail" width="125" height="125" />
+       </p>
+       </div>-->
 </template>
 
 <style scoped>

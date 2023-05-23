@@ -11,6 +11,14 @@ defineProps({
 </script>
 
 <template>
+  <div class="card" style="width: 18rem;">
+  <img :src="imageUrl" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{ title }}</h5>
+    <p class="card-text">{{ abstract }}.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
   <div class="custom-component"></div>
   <div class="title text-center"  :style="{backgroundColor: color}">
     <img :src="imageUrl" alt="" class="image image-fuid">
