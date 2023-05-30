@@ -1,4 +1,27 @@
-[
+{
+  "social_links": [
+    {
+      "id": 1,
+      "name": "facebook",
+      "url": "https://www.facebook.com"
+    },
+    {
+      "id": 2,
+      "name": "twitter",
+      "url": "https://www.twitter.com"
+    },
+    {
+      "id": 3,
+      "name": "instagram",
+      "url": "https://www.instagram.com"
+    },
+    {
+      "id": 4,
+      "name": "linkedin",
+      "url": "https://www.linkedin.com"
+    }
+  ],
+  "works": [
     {
       "id": 1,
       "title": "Work 1",
@@ -11,7 +34,7 @@
     {
       "id": 2,
       "title": "Work 2",
-      "description": "This is a sample work",
+      "description": "This is the second work",
       "image_thumbnail": "https://picsum.photos/300/200",
       "image_detail": "https://picsum.photos/1024/768",
       "client": "Client 1",
@@ -20,10 +43,11 @@
     {
       "id": 3,
       "title": "Work 3",
-      "description": "This is a sample work",
+      "description": "third work",
       "image_thumbnail": "https://picsum.photos/300/200",
       "image_detail": "https://picsum.photos/1024/768",
       "client": "Client 1",
       "url": "https://www.google.com"
     }
   ]
+}
