@@ -19,14 +19,14 @@ defineProps({
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
-  <div class="custom-component"></div>
+  <!-- <div class="custom-component"></div>
   <div class="title text-center"  :style="{backgroundColor: color}">
     <img :src="imageUrl" alt="" class="image image-fuid">
     <h2>{{ title }}</h2>
     <p class="abstract">
       {{ abstract }}
     </p>
-  </div>
+  </div> -->
 </template>
 
 <style scoped>

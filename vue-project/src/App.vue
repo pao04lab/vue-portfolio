@@ -1,7 +1,6 @@
 <script >
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
 import PortfolioItem from './components/PortfolioItem.vue'
+import Header from './components/Header.vue'
 import worksData from './assets/works.json'
 
 export default {
@@ -11,37 +10,26 @@ export default {
     };
   },
   components: {
+    Header,
     PortfolioItem,
   },
 };
 
 
-
 </script>
 
 <template>
-  <header class="mb-4">
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-    <div class="wrapper">
-      <HelloWorld msg="custom message" />
-    </div>
-  </header>
 
   <main>
+    <Header />
     <div class="row">
-      <div class="col" v-for="work in works" :key="work.id">
+      <div class="col-12 col-md-6" v-for="work in works" :key="work.id">
         <PortfolioItem 
           :title="work.title"
           :abstract="work.description"
           :imageUrl="work.image_thumbnail"
           />
       </div>
-        <!-- <div class="col">
-        <PortfolioItem 
-          title="Ola"
-          abstract="Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore. magna aliqua."
-          imageUrl="https://source.unsplash.com/random/?green" />
-        </div>-->
     </div>
   </main>
 
@@ -58,6 +46,9 @@ export default {
 
 <style scoped>
 
+.container {
+  border: solid red;
+}
 
 header {
   line-height: 1.5;
